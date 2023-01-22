@@ -1,0 +1,115 @@
+// Заголовки, загальні БЕМ блоки та інше...
+
+.page {
+    // .page__main
+    &__main {
+    }
+    // .page__about
+    &__about {
+    }
+    // .page__ukraine
+    &__ukraine {
+    }
+    // .page__programs
+    &__programs {
+    }
+}
+
+//========================================================================================================================================================
+.social {
+    // .social__items
+    &__items {
+        display: flex;
+        gap: rem(26);
+    }
+    // .social__item
+    &__item {
+        font-size: rem(22);
+    }
+}
+//========================================================================================================================================================
+.button {
+    font-weight: 700;
+    @include adaptiveValue("font-size", 22, 16);
+    line-height: math.div(24, 22);
+    color: #fff;
+    background-color: $activeColor;
+    border-radius: rem(10);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    padding: rem(22);
+    @media (any-hover: hover) {
+        &:hover {
+            background-color: #059152;
+        }
+    }
+}
+//========================================================================================================================================================
+
+.title {
+    &_right {
+        display: grid;
+        justify-content: flex-end;
+    }
+    // .title__value
+    &__value {
+        @include adaptiveValue("font-size", 44, 30);
+        line-height: math.div(66, 44);
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        position: relative;
+        &::before {
+            content: "";
+            width: rem(360);
+            height: rem(1);
+            background-color: $mainColor;
+            position: absolute;
+        }
+        &_left {
+            &::before {
+                left: rem(-380);
+            }
+        }
+        &_right {
+            &::before {
+                right: rem(-380);
+            }
+        }
+    }
+}
+//========================================================================================================================================================
+
+.text {
+    // .text__color
+    &__color {
+        font-weight: 700;
+        @include adaptiveValue("font-size", 24, 16);
+        line-height: math.div(32, 24);
+        color: $defaultColor;
+    }
+    // .text__original
+    &__original {
+        @include adaptiveValue("font-size", 22, 14);
+        line-height: math.div(32, 22);
+        font-weight: 300;
+    }
+}
+//========================================================================================================================================================
+
+.banner-box {
+    // .banner-box__container
+    &__container {
+        @include adaptiveValue("padding-top", 113, 40);
+
+        @include adaptiveValue("min-height", 300, 150);
+    }
+    // .banner-box__title
+    &__title {
+        color: #ffffff;
+        @include adaptiveValue("font-size", 70, 30);
+        line-height: math.div(105, 70);
+        font-weight: 700;
+    }
+}

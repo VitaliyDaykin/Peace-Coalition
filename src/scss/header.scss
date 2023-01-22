@@ -1,0 +1,202 @@
+//====================================================================================================
+.header {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 50;
+    transition: all 0.3s ease 0s;
+    &._header-scroll {
+        background-color: rgba(16, 36, 89, 0.7);
+    }
+    // .header__container
+    &__container {
+        min-height: rem(90);
+        padding-top: rem(10);
+        padding-bottom: rem(10);
+        display: flex;
+        align-items: center;
+        transition: min-height 0.3s ease 0s;
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: rem(17);
+            width: calc(100% - rem(30));
+            height: rem(1);
+            background-color: rgba(255, 255, 255, 0.8);
+            display: flex;
+        }
+        ._header-scroll & {
+            &::before {
+                display: none;
+            }
+        }
+        @media (max-width: $tablet) {
+            min-height: rem(60);
+        }
+        @media (max-width: $mobile) {
+            min-height: rem(40);
+        }
+    }
+    // .header__logo
+    &__logo {
+        position: relative;
+        z-index: 3;
+        img {
+            max-width: 100%;
+        }
+    }
+    // .header__menu
+    &__menu {
+        flex: 1 1 auto;
+        display: flex;
+        justify-content: flex-end;
+    }
+    // .header__social
+    &__social {
+        a {
+            color: $activeColor;
+            @media (any-hover: hover) {
+                &:hover {
+                    color: #059152;
+                }
+            }
+        }
+    }
+}
+.menu {
+    display: flex;
+    // .menu__icon
+    &__icon {
+    }
+    // .menu__body
+    &__body {
+        display: flex;
+        align-items: center;
+        column-gap: rem(84);
+        @media (max-width: $pc) {
+            column-gap: rem(50);
+        }
+        @media (max-width: $tablet) {
+            column-gap: rem(30);
+        }
+        @media (max-width: $mobile) {
+            flex-direction: column;
+            align-items: center;
+            position: fixed;
+            row-gap: rem(50);
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: -100%;
+            overflow: auto;
+            background-color: rgba(16, 36, 89, 0.8);
+            transition: left 0.3s ease 0s;
+            padding: rem(120) rem(15) rem(30) rem(15);
+            &::before {
+                content: "";
+                position: fixed;
+                background-color: rgba(16, 36, 89);
+                height: rem(90);
+                width: 100%;
+                left: -100%;
+                top: 0;
+                transition: left 0.3s ease 0s;
+            }
+            .menu-open & {
+                left: 0;
+                &::before {
+                    left: 0;
+                }
+            }
+        }
+    }
+    // .menu__list
+    &__list {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: rem(0) rem(10);
+        @include adaptiveValue("column-gap", 54, 15);
+        row-gap: rem(5);
+        @media (max-width: $mobile) {
+            flex-direction: column;
+            text-align: center;
+            row-gap: rem(25);
+        }
+        li a {
+            font-size: rem(16);
+            line-height: math.div(24, 16);
+            font-weight: 500;
+            color: #fff;
+            transition: all 0.3s ease 0s;
+            @media (any-hover: hover) {
+                &:hover {
+                    color: $activeColor;
+                    text-decoration: underline;
+                }
+            }
+            @media (max-width: $mobile) {
+                font-size: rem(25);
+            }
+        }
+    }
+}
+
+//====================================================================================================
+
+//Burger
+
+.icon-menu {
+    display: none;
+    @media (max-width: $mobile) {
+        display: block;
+        position: relative;
+        flex: 0 0 rem(30);
+        width: rem(30);
+        height: rem(18);
+        z-index: 5;
+        @media (any-hover: none) {
+            cursor: default;
+        }
+        span,
+        &::before,
+        &::after {
+            content: "";
+            transition: all 0.3s ease 0s;
+            right: 0;
+            position: absolute;
+            width: 100%;
+            height: rem(2);
+            background-color: #fff;
+        }
+        &::before {
+            top: 0;
+        }
+        &::after {
+            bottom: 0;
+        }
+        span {
+            top: calc(50% - rem(1));
+        }
+        .menu-open & {
+            span {
+                width: 0;
+            }
+            &::before,
+            &::after {
+            }
+            &::before {
+                top: calc(50% - rem(1));
+                transform: rotate(-45deg);
+            }
+            &::after {
+                bottom: calc(50% - rem(1));
+                transform: rotate(45deg);
+            }
+        }
+    }
+}

@@ -1,0 +1,38 @@
+%ic {
+    font-family: "icons";
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+[class*="_icon-"] {
+    &:before {
+        @extend %ic;
+        display: block;
+    }
+}
+
+._icon-arrow-slider:before {
+    content: "\e900";
+}
+._icon-close:before {
+    content: "\e901";
+}
+._icon-fas:before {
+    content: "\e902";
+}
+._icon-instagram:before {
+    content: "\e903";
+}
+._icon-logo-footer:before {
+    content: "\e904";
+}
+._icon-pdf:before {
+    content: "\e905";
+}
+._icon-twitter:before {
+    content: "\e906";
+}
