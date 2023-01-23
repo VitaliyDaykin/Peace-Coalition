@@ -476,45 +476,34 @@ h6 {
   color: #fff;
 }
 
+.main__slide {
+  position: relative;
+}
+
+.main__slide::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background: rgba(16, 36, 89, 0.5);
+}
+
 .no-webp .main__slide_1{
   background: url("../img/main/bg-slider01.jpg") center top no-repeat; }
-
-.main__slide_1 {
-  background-blend-mode: multiply;
-  background-color: rgba(16, 36, 89, 0.5);
-}
 
 .no-webp .main__slide_2{
   background: url("../img/main/bg-slider02.jpg") center top no-repeat; }
 
-.main__slide_2 {
-  background-blend-mode: multiply;
-  background-color: rgba(16, 36, 89, 0.5);
-}
-
 .no-webp .main__slide_3{
   background: url("../img/main/bg-slider03.jpg") center top no-repeat; }
-
-.main__slide_3 {
-  background-blend-mode: multiply;
-  background-color: rgba(16, 36, 89, 0.5);
-}
 
 .no-webp .main__slide_4{
   background: url("../img/main/bg-slider04.jpg") center top no-repeat; }
 
-.main__slide_4 {
-  background-blend-mode: multiply;
-  background-color: rgba(16, 36, 89, 0.5);
-}
-
 .no-webp .main__slide_5{
   background: url("../img/main/bg-slider05.jpg") center top no-repeat; }
-
-.main__slide_5 {
-  background-blend-mode: multiply;
-  background-color: rgba(16, 36, 89, 0.5);
-}
 
 .slide-main {
   position: relative;
@@ -704,8 +693,17 @@ h6 {
   background: url("../img/banner/01.jpg") center top no-repeat; }
 
 .ukraine__banner-box {
-  background-blend-mode: multiply;
-  background-color: rgba(16, 36, 89, 0.5);
+  position: relative;
+}
+
+.ukraine__banner-box::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background: rgba(16, 36, 89, 0.5);
 }
 
 .slider-ukraine {
@@ -779,8 +777,17 @@ h6 {
   background: url("../img/banner/02.jpg") center top no-repeat; }
 
 .programs__banner-box {
-  background-blend-mode: multiply;
-  background-color: rgba(16, 36, 89, 0.5);
+  position: relative;
+}
+
+.programs__banner-box::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background: rgba(16, 36, 89, 0.5);
 }
 
 .process-programs__item {
@@ -853,8 +860,17 @@ h6 {
   background: url("../img/banner/03.jpg") center top no-repeat; }
 
 .research__banner-box {
-  background-blend-mode: multiply;
-  background-color: rgba(16, 36, 89, 0.5);
+  position: relative;
+}
+
+.research__banner-box::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background: rgba(16, 36, 89, 0.5);
 }
 
 .info-item-research {
@@ -941,8 +957,17 @@ h6 {
   background: url("../img/banner/04.jpg") center top no-repeat; }
 
 .ideas__banner-box {
-  background-blend-mode: multiply;
-  background-color: rgba(16, 36, 89, 0.5);
+  position: relative;
+}
+
+.ideas__banner-box::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background: rgba(16, 36, 89, 0.5);
 }
 
 .ideas__container {
@@ -983,8 +1008,17 @@ h6 {
   background: url("../img/banner/05.jpg") center top/cover no-repeat; }
 
 .join-us {
-  background-blend-mode: multiply;
-  background-color: rgba(16, 36, 89, 0.5);
+  position: relative;
+}
+
+.join-us::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background: rgba(16, 36, 89, 0.5);
 }
 
 .join-us__title {
@@ -2197,6 +2231,14 @@ h6 {
   .menu__list li a:hover {
     color: #00b665;
     text-decoration: underline;
+  }
+
+  .footer .menu-footer__list a:hover {
+    color: #00b665;
+  }
+
+  .footer .menu-footer__list-privacy a:hover {
+    color: #00b665;
   }
 
   .item-team__image:hover img {

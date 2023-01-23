@@ -7,31 +7,30 @@
     }
     // .main__slide
     &__slide {
-        // .main__slide_1
+        position: relative;
+        &::before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            position: absolute;
+            background: rgba(16, 36, 89, 0.5);
+        } // .main__slide_1
         &_1 {
-            background-blend-mode: multiply;
             background: url("@img/main/bg-slider01.jpg") center top no-repeat;
-            background-color: rgba(16, 36, 89, 0.5);
         }
         &_2 {
-            background-blend-mode: multiply;
             background: url("@img/main/bg-slider02.jpg") center top no-repeat;
-            background-color: rgba(16, 36, 89, 0.5);
         }
         &_3 {
-            background-blend-mode: multiply;
             background: url("@img/main/bg-slider03.jpg") center top no-repeat;
-            background-color: rgba(16, 36, 89, 0.5);
         }
         &_4 {
-            background-blend-mode: multiply;
             background: url("@img/main/bg-slider04.jpg") center top no-repeat;
-            background-color: rgba(16, 36, 89, 0.5);
         }
         &_5 {
-            background-blend-mode: multiply;
             background: url("@img/main/bg-slider05.jpg") center top no-repeat;
-            background-color: rgba(16, 36, 89, 0.5);
         }
     }
 }
@@ -265,8 +264,16 @@
     // .ukraine__banner-box
     &__banner-box {
         background: url("@img/banner/01.jpg") center top no-repeat;
-        background-blend-mode: multiply;
-        background-color: rgba(16, 36, 89, 0.5);
+        position: relative;
+        &::before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            position: absolute;
+            background: rgba(16, 36, 89, 0.5);
+        }
     }
     // .ukraine__slider
     &__slider {
@@ -353,8 +360,16 @@
     // .programs__banner-box
     &__banner-box {
         background: url("@img/banner/02.jpg") center top no-repeat;
-        background-blend-mode: multiply;
-        background-color: rgba(16, 36, 89, 0.5);
+        position: relative;
+        &::before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            position: absolute;
+            background: rgba(16, 36, 89, 0.5);
+        }
     }
     // .programs__process
     &__process {
@@ -451,8 +466,16 @@
     // .research__banner-box
     &__banner-box {
         background: url("@img/banner/03.jpg") center top no-repeat;
-        background-blend-mode: multiply;
-        background-color: rgba(16, 36, 89, 0.5);
+        position: relative;
+        &::before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            position: absolute;
+            background: rgba(16, 36, 89, 0.5);
+        }
     }
     // .research__info-items
     &__info-items {
@@ -565,8 +588,16 @@
     // .ideas__banner-box
     &__banner-box {
         background: url("@img/banner/04.jpg") center top no-repeat;
-        background-blend-mode: multiply;
-        background-color: rgba(16, 36, 89, 0.5);
+        position: relative;
+        &::before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            position: absolute;
+            background: rgba(16, 36, 89, 0.5);
+        }
     }
     // .ideas__content
     &__content {
@@ -628,10 +659,18 @@
 
 .join-us {
     background: url("@img/banner/05.jpg") center top / cover no-repeat;
-    background-blend-mode: multiply;
-    background-color: rgba(16, 36, 89, 0.5);
     @include adaptiveValue("padding-top", 60, 30);
     @include adaptiveValue("padding-bottom", 50, 30);
+    position: relative;
+    &::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        position: absolute;
+        background: rgba(16, 36, 89, 0.5);
+    }
     // .join-us__container
     &__container {
     }

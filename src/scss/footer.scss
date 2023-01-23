@@ -41,6 +41,11 @@
             a {
                 font-size: rem(16);
                 color: #fff;
+                @media (any-hover: hover) {
+                    &:hover {
+                        color: $activeColor;
+                    }
+                }
             }
         }
         // .menu__list-privacy
@@ -51,6 +56,11 @@
             a {
                 font-size: rem(16);
                 color: #fff;
+                @media (any-hover: hover) {
+                    &:hover {
+                        color: $activeColor;
+                    }
+                }
             }
         }
     }
