@@ -6,7 +6,7 @@
     &__wrapper {
     }
     // .main__slide
-    .webp &__slide {
+    &__slide {
         // .main__slide_1
         &_1 {
             background-blend-mode: multiply;
@@ -263,7 +263,7 @@
 
 .ukraine {
     // .ukraine__banner-box
-    .webp &__banner-box {
+    &__banner-box {
         background: url("@img/banner/01.jpg") center top no-repeat;
         background-blend-mode: multiply;
         background-color: rgba(16, 36, 89, 0.5);
@@ -351,7 +351,7 @@
 
 .programs {
     // .programs__banner-box
-    .webp &__banner-box {
+    &__banner-box {
         background: url("@img/banner/02.jpg") center top no-repeat;
         background-blend-mode: multiply;
         background-color: rgba(16, 36, 89, 0.5);
@@ -449,7 +449,7 @@
 
 .research {
     // .research__banner-box
-    .webp &__banner-box {
+    &__banner-box {
         background: url("@img/banner/03.jpg") center top no-repeat;
         background-blend-mode: multiply;
         background-color: rgba(16, 36, 89, 0.5);
@@ -563,7 +563,7 @@
 
 .ideas {
     // .ideas__banner-box
-    .webp &__banner-box {
+    &__banner-box {
         background: url("@img/banner/04.jpg") center top no-repeat;
         background-blend-mode: multiply;
         background-color: rgba(16, 36, 89, 0.5);
@@ -626,13 +626,12 @@
 }
 //========================================================================================================================================================
 
-.webp .join-us {
+.join-us {
     background: url("@img/banner/05.jpg") center top / cover no-repeat;
     background-blend-mode: multiply;
     background-color: rgba(16, 36, 89, 0.5);
     @include adaptiveValue("padding-top", 60, 30);
     @include adaptiveValue("padding-bottom", 50, 30);
-
     // .join-us__container
     &__container {
     }

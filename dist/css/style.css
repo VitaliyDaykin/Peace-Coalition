@@ -700,13 +700,13 @@ h6 {
   text-align: center;
 }
 
-.no-webp .webp .ukraine__banner-box{
-  background: url("../img/banner/01.jpg") center top no-repeat; }
-
 .webp .ukraine__banner-box {
   background-blend-mode: multiply;
   background-color: rgba(16, 36, 89, 0.5);
 }
+
+.no-webp .ukraine__banner-box{
+  background: url("../img/banner/01.jpg") center top no-repeat; }
 
 .slider-ukraine {
   position: relative;
@@ -2226,7 +2226,7 @@ h6 {
 
 .webp .webp .main__slide_5{ background: url(../img/main/bg-slider05.webp) center top no-repeat; }
 
-.webp .webp .ukraine__banner-box{ background: url(../img/banner/01.webp) center top no-repeat; }
+.webp .ukraine__banner-box{ background: url(../img/banner/01.webp) center top no-repeat; }
 
 .webp .webp .programs__banner-box{ background: url(../img/banner/02.webp) center top no-repeat; }
 
