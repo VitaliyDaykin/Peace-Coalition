@@ -44,10 +44,13 @@
         flex-direction: column;
         justify-content: center;
         height: 100vh;
-        @media (min-width: $mobile) {
-            padding-left: rem(100);
-            padding-top: rem(150);
-        }
+
+        // @media (min-width: em(883)) {
+        //     padding-left: rem(100);
+        //     padding-top: rem(150);
+        // }
+        @include adaptiveValue("padding-top", 100, 30, 2, 1160, 768);
+        @include adaptiveValue("padding-left", 150, 30, 2, 1160, 768);
     }
     // .slide-main__title
     &__title {
@@ -107,20 +110,27 @@
             justify-content: center;
         }
     }
-    // // .slide-main__arrow
-    // &__arrow {
-    //     color: #fff;
-    //     position: absolute;
-    //     top: 50%;
-    //     &.swiper-button-next {
-    //         right: 330px;
-    //     }
-    //     &.swiper-button-prev {
-    //         left: 300px;
-    //         z-index: 5;
-    //         transform: rotate(-180deg);
-    //     }
-    // }
+    // .slide-main__arrow
+    &__arrow {
+        color: #fff;
+        position: absolute;
+        z-index: 10;
+        top: 50vh;
+        @media (max-width: em(600)) {
+            top: 40vh;
+        }
+        // .slide-main__arrow_left
+        &_left {
+            transform: rotate(-180deg);
+            @include adaptiveValue("left", 300, 50, 2, 1920, 1200);
+        }
+        // .slide-main__arrow_right
+        &_right {
+            @include adaptiveValue("right", 300, 50, 2, 1920, 1100);
+            @include adaptiveValue("right", 5, 5, 1, 1099.9, 768);
+            @include adaptiveValue("right", 5, 5, 1, 768, 320);
+        }
+    }
 }
 //========================================================================================================================================================
 
@@ -128,6 +138,7 @@
     @include adaptiveValue("padding-bottom", 120, 30);
     // .about__header
     &__header {
+        position: relative;
     }
     // .about__team
     &__team {
@@ -182,23 +193,43 @@
     // .team-about__slide
     &__slide {
     }
+    // .team-about__arrows
+    &__arrows {
+        display: flex;
+        align-items: center;
+        width: rem(200);
+        justify-content: space-between;
+        position: absolute;
+        bottom: rem(-100);
+        left: 50%;
+        transform: translate(-50%, -50%);
+        @media (max-width: $mobile) {
+            display: none;
+        }
+    }
     // .team-about__arrow
     &__arrow {
-        position: absolute;
-        z-index: 10;
-        top: calc(50% + 50px);
-        transform: translate(-50%, -50%);
-        font-size: rem(30);
         color: $defaultColor;
-        // .team-about__arrow_left
+        width: rem(50);
+        height: rem(50);
+        background-color: rgba(16, 36, 89, 0.5);
+        border-radius: rem(16);
+        display: flex;
+        justify-content: center;
+        transition: all 0.3s ease 0s;
+        align-items: center;
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: rgba(16, 36, 89, 0.8);
+                color: rgba(16, 36, 89, 0.8);
+            }
+        }
         &_left {
-            right: rem(-30);
+            transform: rotate(-180deg);
         }
 
         // .team-about__arrow_right
         &_right {
-            transform: rotate(-180deg);
-            left: rem(-25);
         }
     }
 }
@@ -278,6 +309,9 @@
     // .ukraine__slider
     &__slider {
     }
+    // .ukraine__pilot-project
+    &__pilot-project {
+    }
 }
 
 .slider-ukraine {
@@ -306,14 +340,15 @@
         color: $defaultColor;
         cursor: pointer;
 
-        // .slider-ukraine__arrow_left
+        // .slide-main__arrow_left
         &_left {
-            left: rem(300);
             transform: rotate(-180deg);
+            @include adaptiveValue("left", 350, 50, 2, 1920, 1200);
         }
-        // .slider-ukraine__arrow_right
+        // .slide-main__arrow_right
         &_right {
-            right: rem(300);
+            @include adaptiveValue("right", 300, 50, 2, 1920, 1100);
+            @include adaptiveValue("right", 5, 5, 1, 1099.9, 768);
         }
     }
 }
@@ -333,6 +368,13 @@
         @media (max-width: $mobile) {
             flex-direction: column;
             row-gap: rem(10);
+        }
+        .swiper-slide-next & {
+            .title__value {
+                &::before {
+                    display: none;
+                }
+            }
         }
     }
     // .slider-ukraine-content__title
@@ -354,6 +396,65 @@
         }
     }
 }
+
+.pilot-project-ukraine {
+    @include adaptiveValue("padding-top", 100, 30);
+    @include adaptiveValue("padding-bottom", 100, 30);
+    // .pilot-project-ukraine__container
+    &__container {
+        display: flex;
+        gap: rem(20);
+        @media (max-width: em(1000)) {
+            flex-direction: column-reverse;
+        }
+    }
+    // .pilot-project-ukraine__right-box
+    &__right-box {
+        position: relative;
+    }
+    // .pilot-project-ukraine__title
+    &__title {
+        &:not(:last-child) {
+            margin-bottom: rem(30);
+        }
+    }
+    // .pilot-project-ukraine__image
+    &__image {
+        position: relative;
+        max-width: rem(500);
+        margin: 0 auto;
+        box-shadow: 0px 4px 4px rgba(0, 69, 165, 0.3);
+        &::before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            position: absolute;
+            background: rgba(16, 36, 89, 0.5);
+        }
+        @media (max-width: em(1000)) {
+            text-align: center;
+            margin-bottom: rem(20);
+        }
+        img {
+            max-width: 100%;
+        }
+    }
+    // .pilot-project-ukraine__text
+    &__text {
+        flex: 0 0 60%;
+        @media (min-width: em(1000)) {
+            padding-right: rem(25);
+        }
+        .text__color {
+            &:not(:last-child) {
+                margin-bottom: rem(30);
+            }
+        }
+    }
+}
+
 //========================================================================================================================================================
 
 .programs {
@@ -673,6 +774,7 @@
     }
     // .join-us__container
     &__container {
+        position: relative;
     }
     // .join-us__title
     &__title {
@@ -771,14 +873,23 @@
         position: absolute;
         top: calc(50% + rem(45));
         transform: translate(-50%, -50%);
+        @media (max-width: $mobile) {
+            display: none;
+        }
         // .partners__arrow_left
         &_left {
             transform: rotate(-180deg);
             left: rem(50);
+            @media (max-width: em(1057)) {
+                left: rem(20);
+            }
         }
         // .partners__arrow_right
         &_right {
             right: rem(50);
+            @media (max-width: em(1057)) {
+                right: rem(20);
+            }
         }
     }
     // .partners__slider

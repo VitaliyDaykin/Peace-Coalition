@@ -120,7 +120,7 @@
         flex-wrap: wrap;
         justify-content: center;
         padding: rem(0) rem(10);
-        @include adaptiveValue("column-gap", 54, 15);
+        @include adaptiveValue("column-gap", 54, 15, 2, 1160, 768);
         row-gap: rem(5);
         @media (max-width: $mobile) {
             flex-direction: column;

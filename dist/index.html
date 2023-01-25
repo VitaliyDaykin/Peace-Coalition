@@ -6,7 +6,7 @@
 	<meta charset="UTF-8" />
 	<meta name="format-detection" content="telephone=no" />
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20230123202252" />
+	<link rel="stylesheet" href="css/style.min.css?_v=20230125051027" />
 	<!-- <link rel="shortcut icon" href="favicon.ico"> -->
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,7 +14,7 @@
 
 <body>
 	<div class="wrapper">
-		<header data-scroll="110" class="header">
+		<header data-scroll="110" data-scroll-show class="header">
 			<div class="header__container">
 				<a href="" class="header__logo">
 					<img src="img/logo.svg" alt="Logo" />
@@ -22,12 +22,12 @@
 				<div class="header__menu menu">
 					<nav class="menu__body">
 						<ul class="menu__list">
-							<li><a href="#">About Us</a></li>
-							<li><a href="#">Ukraine</a></li>
-							<li><a href="#">Programs</a></li>
-							<li><a href="#">Research</a></li>
-							<li><a href="#">News & Ideas</a></li>
-							<li><a href="#">Contact</a></li>
+							<li><a data-goto=".about" href="#">About Us</a></li>
+							<li><a data-goto=".ukraine" href="#">Ukraine</a></li>
+							<li><a data-goto=".programs" href="#">Programs</a></li>
+							<li><a data-goto=".research" href="#">Research</a></li>
+							<li><a data-goto=".ideas" href="#">News & Ideas</a></li>
+							<li><a data-goto=".join-us" href="#">Contact</a></li>
 						</ul>
 						<div class="header__social social">
 							<ul class="social__items">
@@ -38,14 +38,17 @@
 						</div>
 					</nav>
 					<button type="button" class="menu__icon icon-menu"><span></span></button>
+					<a href="#" data-goto="#up" class="scroll-up _icon-arrow-slider"></a>
 				</div>
 			</div>
 		</header>
 
-		<main class="page">
+		<main id="up" class="page">
 			<section class="page__main main">
 				<!-- Оболочка слайдера -->
 				<div class="main__slider swiper">
+					<button type="button" class="slide-main__arrow slide-main__arrow_left _icon-arrow-slider"></button>
+					<button type="button" class="slide-main__arrow slide-main__arrow_right _icon-arrow-slider"></button>
 					<!-- Двигающееся часть слайдера -->
 					<div class="main__wrapper swiper-wrapper">
 						<!-- Слайд -->
@@ -142,8 +145,7 @@
 						<div class="team-about__title title">
 							<h3 class="title__value title__value_right">Meet our team</h3>
 						</div>
-						<button type="button" class="team-about__arrow team-about__arrow_left _icon-arrow-slider"></button>
-						<button type="button" class="team-about__arrow team-about__arrow_right _icon-arrow-slider"></button>
+
 						<!-- Оболочка слайдера -->
 						<div class="team-about__slider swiper">
 							<!-- Двигающееся часть слайдера -->
@@ -183,7 +185,10 @@
 									</article>
 								</div>
 							</div>
-							<!-- Если нужна навигация (влево/вправо) -->
+							<div class="team-about__arrows">
+								<button type="button" class="team-about__arrow team-about__arrow_left _icon-arrow-slider"></button>
+								<button type="button" class="team-about__arrow team-about__arrow_right _icon-arrow-slider"></button>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -256,6 +261,37 @@
 										</div>
 									</div>
 								</article>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="ukraine__pilot-project pilot-project-ukraine">
+					<div class="pilot-project-ukraine__container">
+						<div class="pilot-project-ukraine__text text">
+							<div class="text__color">
+								<p>
+									We propose a pilot project that will quickly and transparently rebuild two small Ukrainian towns. To examinethe functional parameters of a mass claims process for restitution and compensation, we have selected Andriivka and Kozarovychi, due to extensive
+									property damage & destruction, and population dislocation.
+								</p>
+							</div>
+							<div class="text__original">
+								<p>
+									Victims whose homes have been damaged or destroyed can apply for compensation via a secure digital platform, and use new types of digital evidence to prove their home ownership. The goal is to significantly accelerate what is typically a decades-long property
+									restitution process, and provide a demonstration case that large development agencies can scale.
+								</p>
+								<p>
+									If successful, this process could transform post-war reconstruction, not just in Ukraine but around the globe. This pilot project will be conducted in a transparent manner with the knowledge, approval and cooperation of the Ukrainian federal, military local
+									government authorities as well as civil society representatives and the civilian population.
+								</p>
+								<p>Upon successful completion of the initial pilot projects, other communities will be encouraged to submit applications and a letter of intent to participate in further projects conducted in a similar manner.</p>
+							</div>
+						</div>
+						<div class="pilot-project-ukraine__right-box">
+							<div class="pilot-project-ukraine__title title title_right">
+								<h3 class="title__value title__value_right">Pilot Project</h3>
+							</div>
+							<div class="pilot-project-ukraine__image">
+								<picture><source srcset="img/pilot.webp" type="image/webp"><img src="img/pilot.jpg" alt="Image" /></picture>
 							</div>
 						</div>
 					</div>
@@ -526,7 +562,10 @@
 		</main>
 		<footer class="footer">
 			<div class="footer__container">
-				<a href="" class="footer__logo _icon-logo-footer"></a>
+				<a href="" class="footer__logo">
+					<img src="img/logo2.svg" alt="Logo" />
+				</a>
+
 				<div class="footer__menu menu-footer">
 					<nav class="menu-footer__body">
 						<ul class="menu-footer__list">
@@ -538,10 +577,10 @@
 							<li><a href="#">Contact</a></li>
 						</ul>
 						<div class="footer__social social">
-							<ul class="social__items">
-								<li class="social__item"><a href="#" class="_icon-twitter"></a></li>
-								<li class="social__item"><a href="#" class="_icon-instagram"></a></li>
-								<li class="social__item"><a href="#" class="_icon-fas"></a></li>
+							<ul class="social__items social__items_footer">
+								<li class="social__item_footer"><a href="#" class="_icon-twitter"></a></li>
+								<li class="social__item_footer"><a href="#" class="_icon-instagram"></a></li>
+								<li class="social__item_footer"><a href="#" class="_icon-fas"></a></li>
 							</ul>
 						</div>
 					</nav>
@@ -556,7 +595,7 @@
 		</footer>
 
 	</div>
-	<script src="js/app.min.js?_v=20230123202252"></script>
+	<script src="js/app.min.js?_v=20230125051027"></script>
 </body>
 
 </html>

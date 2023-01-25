@@ -25,6 +25,17 @@
     // .social__item
     &__item {
         font-size: rem(22);
+        &_footer {
+            a {
+                color: #fff;
+                transition: color 0.3s ease 0s;
+                @media (any-hover: hover) {
+                    &:hover {
+                        color: $activeColor;
+                    }
+                }
+            }
+        }
     }
 }
 //========================================================================================================================================================
@@ -102,7 +113,7 @@
     // .banner-box__container
     &__container {
         @include adaptiveValue("padding-top", 113, 40);
-
+        position: relative;
         @include adaptiveValue("min-height", 300, 150);
     }
     // .banner-box__title
@@ -111,5 +122,36 @@
         @include adaptiveValue("font-size", 70, 30);
         line-height: math.div(105, 70);
         font-weight: 700;
+    }
+}
+//========================================================================================================================================================
+.scroll-up {
+    position: fixed;
+    bottom: rem(150);
+    @include adaptiveValue("right", 220, 50, 2, 1920, 768);
+    @include adaptiveValue(" width", 68, 40, 2, 1920, 768);
+    @include adaptiveValue("height", 68, 40, 2, 1920, 768);
+    background-color: $activeColor;
+    border-radius: 50%;
+    display: flex;
+    font-size: rem(20);
+    justify-content: center;
+    transition: all 0.3s ease 0s;
+    align-items: center;
+    color: #fff;
+    border: rem(2) solid $activeColor;
+    transform: rotate(-90deg);
+    transition: all 0.3s ease 0s;
+    z-index: 10;
+    opacity: 0;
+    ._header-show & {
+        opacity: 1;
+        transition: opacity 0.3s ease 0s;
+    }
+    @media (any-hover: hover) {
+        &:hover {
+            color: $activeColor;
+            background-color: transparent;
+        }
     }
 }

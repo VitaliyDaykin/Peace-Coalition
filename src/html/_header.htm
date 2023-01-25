@@ -1,4 +1,4 @@
-<header data-scroll="110" class="header">
+<header data-scroll="110" data-scroll-show class="header">
     <div class="header__container">
         <a href="" class="header__logo">
             <img src="@img/logo.svg" alt="Logo" />
@@ -6,12 +6,12 @@
         <div class="header__menu menu">
             <nav class="menu__body">
                 <ul class="menu__list">
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Ukraine</a></li>
-                    <li><a href="#">Programs</a></li>
-                    <li><a href="#">Research</a></li>
-                    <li><a href="#">News & Ideas</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a data-goto=".about" href="#">About Us</a></li>
+                    <li><a data-goto=".ukraine" href="#">Ukraine</a></li>
+                    <li><a data-goto=".programs" href="#">Programs</a></li>
+                    <li><a data-goto=".research" href="#">Research</a></li>
+                    <li><a data-goto=".ideas" href="#">News & Ideas</a></li>
+                    <li><a data-goto=".join-us" href="#">Contact</a></li>
                 </ul>
                 <div class="header__social social">
                     <ul class="social__items">
@@ -22,6 +22,7 @@
                 </div>
             </nav>
             <button type="button" class="menu__icon icon-menu"><span></span></button>
+            <a href="#" data-goto="#up" class="scroll-up _icon-arrow-slider"></a>
         </div>
     </div>
 </header>

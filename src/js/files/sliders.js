@@ -88,7 +88,7 @@ function initSliders() {
 					slidesPerView: 2,
 					spaceBetween: 5,
 				},
-				992: {
+				865: {
 					slidesPerView: 3,
 					spaceBetween: 5,
 				},
@@ -162,16 +162,16 @@ function initSliders() {
 					autoHeight: true,
 				},
 				768: {
-					slidesPerView: 2.2,
+					slidesPerView: 2,
 					spaceBetween: 40,
 				},
 				992: {
-					slidesPerView: 3.2,
-					spaceBetween: 20,
+					slidesPerView: 3,
+					spaceBetween: 40,
 				},
 				1200: {
 					slidesPerView: 3,
-					spaceBetween: 56,
+					spaceBetween: 40,
 				},
 			},
 
@@ -304,8 +304,8 @@ function initSliders() {
 
 			// Кнопки "вліво/вправо"
 			navigation: {
-				prevEl: '.swiper-button-prev',
-				nextEl: '.swiper-button-next',
+				prevEl: '.slide-main__arrow_left',
+				nextEl: 'slide-main__arrow_right',
 			},
 			/*
 			// Брейкпоінти

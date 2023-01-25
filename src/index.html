@@ -4,10 +4,12 @@
     <body>
         <div class="wrapper">
             @@include('html/_header.htm',{})
-            <main class="page">
+            <main id="up" class="page">
                 <section class="page__main main">
                     <!-- Оболочка слайдера -->
                     <div class="main__slider swiper">
+                        <button type="button" class="slide-main__arrow slide-main__arrow_left _icon-arrow-slider"></button>
+                        <button type="button" class="slide-main__arrow slide-main__arrow_right _icon-arrow-slider"></button>
                         <!-- Двигающееся часть слайдера -->
                         <div class="main__wrapper swiper-wrapper">
                             <!-- Слайд -->
@@ -104,8 +106,7 @@
                             <div class="team-about__title title">
                                 <h3 class="title__value title__value_right">Meet our team</h3>
                             </div>
-                            <button type="button" class="team-about__arrow team-about__arrow_left _icon-arrow-slider"></button>
-                            <button type="button" class="team-about__arrow team-about__arrow_right _icon-arrow-slider"></button>
+
                             <!-- Оболочка слайдера -->
                             <div class="team-about__slider swiper">
                                 <!-- Двигающееся часть слайдера -->
@@ -145,7 +146,10 @@
                                         </article>
                                     </div>
                                 </div>
-                                <!-- Если нужна навигация (влево/вправо) -->
+                                <div class="team-about__arrows">
+                                    <button type="button" class="team-about__arrow team-about__arrow_left _icon-arrow-slider"></button>
+                                    <button type="button" class="team-about__arrow team-about__arrow_right _icon-arrow-slider"></button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -218,6 +222,37 @@
                                             </div>
                                         </div>
                                     </article>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ukraine__pilot-project pilot-project-ukraine">
+                        <div class="pilot-project-ukraine__container">
+                            <div class="pilot-project-ukraine__text text">
+                                <div class="text__color">
+                                    <p>
+                                        We propose a pilot project that will quickly and transparently rebuild two small Ukrainian towns. To examinethe functional parameters of a mass claims process for restitution and compensation, we have selected Andriivka and Kozarovychi, due to extensive
+                                        property damage & destruction, and population dislocation.
+                                    </p>
+                                </div>
+                                <div class="text__original">
+                                    <p>
+                                        Victims whose homes have been damaged or destroyed can apply for compensation via a secure digital platform, and use new types of digital evidence to prove their home ownership. The goal is to significantly accelerate what is typically a decades-long property
+                                        restitution process, and provide a demonstration case that large development agencies can scale.
+                                    </p>
+                                    <p>
+                                        If successful, this process could transform post-war reconstruction, not just in Ukraine but around the globe. This pilot project will be conducted in a transparent manner with the knowledge, approval and cooperation of the Ukrainian federal, military local
+                                        government authorities as well as civil society representatives and the civilian population.
+                                    </p>
+                                    <p>Upon successful completion of the initial pilot projects, other communities will be encouraged to submit applications and a letter of intent to participate in further projects conducted in a similar manner.</p>
+                                </div>
+                            </div>
+                            <div class="pilot-project-ukraine__right-box">
+                                <div class="pilot-project-ukraine__title title title_right">
+                                    <h3 class="title__value title__value_right">Pilot Project</h3>
+                                </div>
+                                <div class="pilot-project-ukraine__image">
+                                    <img src="@img/pilot.jpg" alt="Image" />
                                 </div>
                             </div>
                         </div>

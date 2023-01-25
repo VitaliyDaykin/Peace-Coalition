@@ -1,49 +1,67 @@
 //====================================================================================================
 .footer {
-    @include adaptiveValue("padding-top", 105, 30);
+    @include adaptiveValue("padding-top", 60, 30);
     @include adaptiveValue("padding-bottom", 50, 30);
     background-color: $mainColor;
     // .footer__container
     &__container {
+        border-top: rem(1) solid rgb(255, 255, 255, 0.3);
     }
     // .footer__menu
     &__menu {
     }
     // .footer__social
     &__social {
-        color: #fff;
     }
     // .footer__privacy
     &__privacy {
     }
+    // .footer__logo-wrapper
+    &__logo-wrapper {
+    }
+
     // .footr__logo
     &__logo {
-        color: #fff;
-        font-size: rem(162);
-        display: inline-flex;
-        margin-bottom: rem(67);
+        @include adaptiveValue("padding-top", 44, 20);
+        @include adaptiveValue("padding-bottom", 65, 20);
+        @include adaptiveValue("max-width", 261, 150);
+        display: block;
+
+        img {
+            width: 100%;
+        }
     }
 
     .menu-footer {
         // .menu__body
         &__body {
             display: flex;
+            align-items: center;
+            gap: rem(10);
             justify-content: space-between;
-            border-bottom: rem(1) solid #fff;
+            border-bottom: rem(1) solid rgb(255, 255, 255, 0.3);
+            @include adaptiveValue("padding-bottom", 46, 20);
+            @media (max-width: $mobile) {
+                flex-direction: column;
+                row-gap: rem(20);
+            }
         }
         // .menu__list
         &__list {
             display: flex;
+            justify-content: center;
+            align-items: center;
             flex-wrap: wrap;
-            gap: rem(55);
-            margin-bottom: rem(46);
+            @include adaptiveValue("column-gap", 55, 15);
+            row-gap: rem(20);
 
             a {
-                font-size: rem(16);
+                font-size: rem(18);
                 color: #fff;
                 @media (any-hover: hover) {
                     &:hover {
                         color: $activeColor;
+                        text-decoration: underline;
                     }
                 }
             }
@@ -54,11 +72,13 @@
             gap: rem(55);
             padding-top: rem(25);
             a {
-                font-size: rem(16);
+                font-size: rem(15);
                 color: #fff;
+                transition: color 0.3s ease 0s;
                 @media (any-hover: hover) {
                     &:hover {
                         color: $activeColor;
+                        text-decoration: underline;
                     }
                 }
             }
