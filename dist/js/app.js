@@ -3555,31 +3555,9 @@
             spaceBetween: 30,
             autoHeight: true,
             speed: 800,
-            pagination: {
-                el: ".slide-main__dots",
-                clickable: true
-            },
             navigation: {
                 prevEl: ".slider-ukraine__arrow_left",
                 nextEl: ".slider-ukraine__arrow_right"
-            },
-            on: {}
-        });
-        if (document.querySelector(".main__slider")) new core(".main__slider", {
-            modules: [ Navigation, Pagination ],
-            observer: true,
-            observeParents: true,
-            slidesPerView: 1,
-            spaceBetween: 0,
-            autoHeight: true,
-            speed: 800,
-            pagination: {
-                el: ".slide-main__dots",
-                clickable: true
-            },
-            navigation: {
-                prevEl: ".slide-main__arrow_left",
-                nextEl: "slide-main__arrow_right"
             },
             on: {}
         });
