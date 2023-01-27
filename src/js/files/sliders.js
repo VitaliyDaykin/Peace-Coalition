@@ -103,7 +103,7 @@ function initSliders() {
 
 			}
 		});
-		document.querySelectorAll('.main__slider').forEach((el) => { el.style.display = "block"; });
+		// document.querySelectorAll('.main__slider').forEach((el) => { el.style.display = "block"; });
 	}
 	if (document.querySelector('.partners__slider')) { // Вказуємо склас потрібного слайдера
 		// Створюємо слайдер
