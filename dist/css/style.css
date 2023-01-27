@@ -588,6 +588,7 @@ h6 {
 }
 
 .main__slide {
+  width: 100%;
   position: relative;
 }
 
@@ -615,6 +616,10 @@ h6 {
 
 .no-webp .main__slide_5{
   background: url("../img/main/bg-slider05.jpg") center top no-repeat; }
+
+.main .main__slide:not(:first-child) {
+  display: none;
+}
 
 .slide-main {
   position: relative;

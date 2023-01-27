@@ -3,11 +3,15 @@
     &__slider {
     }
     // .main__wrapper
-    &__wrapper {
-        // flex-direction: column;
-    }
+    // &__wrapper {
+    //     & .main__slide:not(:first-child) {
+    //         display: none;
+    //     }
+    // flex-direction: column;
+    //}
     // .main__slide
     &__slide {
+        width: 100%;
         position: relative;
         &::before {
             content: "";
@@ -33,6 +37,9 @@
         &_5 {
             background: url("@img/main/bg-slider05.jpg") center top no-repeat;
         }
+    }
+    .main__slide:not(:first-child) {
+        display: none;
     }
 }
 
