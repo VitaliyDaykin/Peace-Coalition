@@ -3,12 +3,8 @@
     &__slider {
     }
     // .main__wrapper
-    // &__wrapper {
-    //     & .main__slide:not(:first-child) {
-    //         display: none;
-    //     }
-    // flex-direction: column;
-    //}
+    &__wrapper {
+    }
     // .main__slide
     &__slide {
         width: 100%;
@@ -37,9 +33,6 @@
         &_5 {
             background: url("@img/main/bg-slider05.jpg") center top no-repeat;
         }
-    }
-    .main__slide:not(:first-child) {
-        display: none;
     }
 }
 
