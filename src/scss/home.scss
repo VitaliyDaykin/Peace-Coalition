@@ -1,6 +1,10 @@
 .main {
+    background-color: #d8e7ff;
+    transition: all 0.3s ease 0s;
+
     // .main__slider
     &__slider {
+        opacity: 0;
     }
     // .main__wrapper
     &__wrapper {

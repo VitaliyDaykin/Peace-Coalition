@@ -100,7 +100,10 @@ function initSliders() {
 			*/
 			// Події
 			on: {
+				init: function () {
+					this.el.style.opacity = 1;
 
+				},
 			}
 		});
 		// document.querySelectorAll('.main__slider').forEach((el) => { el.style.display = "block"; });
